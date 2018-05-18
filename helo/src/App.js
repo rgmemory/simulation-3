@@ -5,16 +5,16 @@ import Auth from './component/Auth/Auth'
 import Dashboard from './component/Dashboard/Dashboard'
 import Form from './component/Form/Form'
 import Post from './component/Post/Post'
+import routes from './routes'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Dashboard />
-        <Form />
-        <Post />
+       
         <Nav />
-        <Auth />
+
+        {routes}
       </div>
     );
   }

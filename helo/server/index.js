@@ -10,6 +10,16 @@ let {
     CONNECTION_STRING
 } = process.env
 
+app.use(bodyParser.json());
+
+app.get('/get', controller.get);
+app.post('/register', controller.register);
+app.post('/login', controller.login)
+
+app.get('/getpost', controller.getpost)
+
+
+
 
 massive(CONNECTION_STRING).then(function(db){
     console.log("db donnected");
